@@ -1,0 +1,20 @@
+class Solution(object):
+    def nextGreaterElement(self, nums1, nums2):
+        """
+        :type nums1: List[int]
+        :type nums2: List[int]
+        :rtype: List[int]
+        """
+        arr=[]
+        for i in range(len(nums1)):
+            for j in range(len(nums2)):
+                if nums1[i]==nums2[j]:
+                    print(max(nums2[j:]))
+                    if nums2[j]> max(nums2[j:]) or j==len(nums2)-1 or nums2[j]== max(nums2[j:]):
+                        arr.append(-1)
+                    else:
+                        for k in range(j,len(nums2)):
+                            if nums2[j]< nums2[k]:
+                                arr.append(nums2[k])
+                                break
+        return arr
