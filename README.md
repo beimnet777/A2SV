@@ -1,2 +1,2 @@
 # A2SV
-practice on data structure and algorithms
+competetive programming on data structure and algorithms
