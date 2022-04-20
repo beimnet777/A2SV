@@ -3,7 +3,9 @@ class Solution:
         """
         Do not return anything, modify nums in-place instead.
         """
-        new
-        for i in range(k):
-            nums.insert(0,nums.pop())
+        k=k%len(nums)
+        
+        list1=nums[-k:]+nums[:-k]
+        for  i in range(len(nums)):
+            nums[i]=list1[i]
         
