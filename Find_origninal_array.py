@@ -9,18 +9,15 @@ class Solution:
         for i in changed:
             if i==0:
                 if count[i]>1:
-                    print(i)
                     org.append(i)
                     count[i]-=2
             else:
                 if count[i]>0:        
                     if i*2 in keys and count[i*2]>0:
-                        print(i+1)
                         org.append(i)
                         count[i]-=1
                         count[i*2]-=1
                     elif i/2 in keys and count[i/2]>0:
-                        print(i+2)
                         org.append(int(i/2))
                         count[i]-=1
                         count[i/2]-=1
